@@ -1,13 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+a {
+  all: unset;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-evenly;
+  max-width: 1200px;
+  padding: 0;
+  margin: 100px auto 0;
+  width: 100%;
+}
+
+.list__card {
+  background-color: rgb(243, 246, 249);
+  border-radius: 20px;
+  height: 140px;
+  width: 500px;
+  margin-bottom: 30px;
+  padding: 30px 30px 40px 30px;
+}
+
+.list__card:hover {
+  cursor: pointer;
+  box-shadow: rgb(0 0 0 / 10%) 5px 5px 5px 5px;
+}
+
+.list__card_title {
+  font-size: 32px;
+  font-weight: 500;
+  font-family: "Raleway";
+  margin: 0 0 10px;
+}
+
+.list__card_p {
+  color: #787878;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway";
+}
+.linkTo:last-child .list__card {
+  background-color: #2e3192;
+  color: white;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.linkTo:last-child .list__card .list__card_p {
+  color: white;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.linkTo:last-child .list__card: :hover {
+  box-shadow: none;
+}
+
+.list__card_link {
+  font-family: "Raleway";
+  color: #2e3192;
+  margin: 20px 0 0;
+  padding: 0;
+  font-weight: 700;
+  line-height: 1.55;
+  font-size: 16px;
+}
+.linkTo:last-child .list__card .list__card_link {
+  color: #f0d031;
+}
+
+.header {
+  max-width: 1170px;
+  margin: 0 auto;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  width: 235px;
+  height: 106px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: #2e3192;
+  color: #ffffff;
+  border-color: transparent;
+  padding: 0;
+  font-size: 14px;
+  font-family: "Raleway", Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.mainTitle {
+  font-size: 46px;
+  font-family: "Raleway";
+  line-height: 1.17;
+  font-weight: 600;
+  padding: 0 20px;
+  max-width: 1170px;
+  margin: 90px auto 0;
+  width: 100%;
+}
+
+.footer {
+  height: 270px;
+  background-color: #eceff2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+  width: 1255px;
+  margin: 0 auto;
+}
+
+.footer__nav {
+  column-gap: 112px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.footer__ul {
+  margin: 0;
+  padding: 0;
+}
+.footer__li {
+  margin: 0 0 20px 0;
+  padding: 0;
+  list-style: none;
+  color: #99a1ab;
+  line-height: 24px;
+  font-size: 16px;
+  font-family: "Manrope", Arial, sans-serif;
+  font-weight: 400;
+  transition: transform 0.2s ease-in-out;
+}
+
+.footer__p-contacts {
+  margin: 0;
+  padding: 0;
+}
+.footer__p {
+  color: #263238;
+  font-size: 22px;
+  font-family: "Manrope", Arial, sans-serif;
+  line-height: 1.45;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__li:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+}
+
+.myLink {
+  transition: transform 0.2s ease-in-out;
+}
+
+.myLink:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.footer__p-contacts {
+  width: 1100px;
+  margin: 0 auto;
+  color: #787878;
+}
+
+.miniLogo {
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.miniLogo:hover {
+  transform: scale(2);
 }
